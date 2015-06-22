@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- Meta setup -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <!-- Title -->
+    <title>Tabplate Demo</title>
+
+    <!-- Include tabplate -->
+    <script src="js/tabplate.js"></script>
+    <link href="css/tabplate.css" rel="stylesheet" type="text/css">
+
+	<!-- Demo -->
+	<link href="css/demo.css" rel="stylesheet" type="text/css">
+    
+</head>
+<body>
+	
+	<!--Container-->
+	<div class="container confine">
+
+		<h3>Tabu Example</h3>
+
+		<ul class="tabplate-triggers">
+			<li><a href="#">Create</a></li>
+			<li><a href="#">Images</a></li>
+			<li><a href="#">Order</a></li>
+		</ul>
+		<ul class="tabplate-content">
+			<li class="something">
+				<p>1) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis mauris mi. Quisque sodales vel orci eu consequat. Morbi lacinia, ligula sit amet commodo interdum, ligula tortor rhoncus elit, quis pretium orci nunc nec nisi. Nunc ultrices dui et erat elementum, vel ultricies erat pellentesque. Sed pretium libero ullamcorper turpis malesuada pretium. Fusce vitae ultrices massa. Morbi mollis erat at urna imperdiet, sit amet malesuada lacus pulvinar. Quisque aliquam lacus velit.</p>
+				
+				<p>Nunc vestibulum aliquet ornare. Quisque adipiscing ipsum at urna aliquet euismod. Mauris aliquam, nisl consectetur aliquam dictum, massa lectus malesuada mauris, at tristique sem nisi sit amet eros. Donec mi leo, facilisis nec pulvinar at, laoreet in est. Nulla augue eros, tincidunt nec ante non, venenatis mollis velit. Duis quis condimentum metus. Pellentesque placerat tortor lorem, dapibus laoreet quam euismod eu. Curabitur consectetur, nibh at consequat cursus, augue urna egestas dui, id volutpat libero tellus eu mauris.</p>
+			</li>
+			<li>
+				<p>2) Dolor sit amet, consectetur adipiscing elit. Donec quis mauris mi. Quisque sodales vel orci eu consequat. Morbi lacinia, ligula sit amet commodo interdum, ligula tortor rhoncus elit, quis pretium orci nunc nec nisi. Nunc ultrices dui et erat elementum, vel ultricies erat pellentesque. Sed pretium libero ullamcorper turpis malesuada pretium. Fusce vitae ultrices massa. Morbi mollis erat at urna imperdiet, sit amet malesuada lacus pulvinar. Quisque aliquam lacus velit.</p>
+			</li>
+			<li>
+				<p>3) Sit amet, consectetur adipiscing elit. Donec quis mauris mi. Quisque sodales vel orci eu consequat. Morbi lacinia, ligula sit amet commodo interdum, ligula tortor rhoncus elit, quis pretium orci nunc nec nisi. Nunc ultrices dui et erat elementum, vel ultricies erat pellentesque. Sed pretium libero ullamcorper turpis malesuada pretium. Fusce vitae ultrices massa. Morbi mollis erat at urna imperdiet, sit amet malesuada lacus pulvinar. Quisque aliquam lacus velit.</p>
+				
+				<p>Nunc vestibulum aliquet ornare. Quisque adipiscing ipsum at urna aliquet euismod. Mauris aliquam, nisl consectetur aliquam dictum, massa lectus malesuada mauris, at tristique sem nisi sit amet eros. Donec mi leo, facilisis nec pulvinar at, laoreet in est. Nulla augue eros, tincidunt nec ante non, venenatis mollis velit. Duis quis condimentum metus. Pellentesque placerat tortor lorem, dapibus laoreet quam euismod eu. Curabitur consectetur, nibh at consequat cursus, augue urna egestas dui, id volutpat libero tellus eu mauris.</p>
+			</li>
+		</ul>
+
+	</div>
+
+	<script>
+	new Tabplate('.tabplate-content', { triggers: '.tabplate-triggers', animate: true });
+	</script>
+
+</body>
+</html>

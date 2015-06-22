@@ -1,0 +1,63 @@
+/**
+ * File: _content.scss
+ * Type: SASS basic
+ * Author: Chris Humboldt
+ */
+
+// Table of contents
+// ---------------------------------------------------------------------------------------
+// Content
+
+// Content
+// ---------------------------------------------------------------------------------------
+@mixin tabplate-content() {
+	ul.tabplate-content {
+		@include list-style(none);
+		@include spacing-no();
+		@include overflow(auto);
+
+		> li {
+			@include hide();
+			@include row();
+
+			&.active {
+				@include show();
+			}
+		}
+
+		.tp-animate & {
+			@include animate(all);
+
+			> li.active {
+				-webkit-animation: cd-fade-in 0.5s;
+				-moz-animation: cd-fade-in 0.5s;
+				animation: cd-fade-in 0.5s;
+			}
+		}
+	}
+
+	@-webkit-keyframes cd-fade-in {
+		0% {
+			@include opacity(0);
+		}
+		100% {
+			@include opacity(1);
+		}
+	}
+	@-moz-keyframes cd-fade-in {
+		0% {
+			@include opacity(0);
+		}
+		100% {
+			@include opacity(1);
+		}
+	}
+	@keyframes cd-fade-in {
+		0% {
+			@include opacity(0);
+		}
+		100% {
+			@include opacity(1);
+		}
+	}
+}

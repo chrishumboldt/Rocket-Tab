@@ -1,0 +1,16 @@
+/**
+ * File: _execute.scss
+ * Type: SASS CSS
+ * Author: Chris Humboldt
+ */
+
+// Table of contents
+// ---------------------------------------------------------------------------------------
+// Generate CSS
+
+// Generate CSS
+// ---------------------------------------------------------------------------------------
+@mixin tabplate-css() {
+	@include tabplate-content();
+	@include tabplate-trigger();
+}

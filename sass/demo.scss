@@ -1,0 +1,50 @@
+/**
+ * File: demo.scss
+ * Type: SASS demo
+ * Author: Chris Humboldt
+ */
+
+// Table of contents
+// ---------------------------------------------------------------------------------------
+// Imports
+// Demo styles
+
+// Import
+// ---------------------------------------------------------------------------------------
+@import "import";
+
+// Demo styles
+// ---------------------------------------------------------------------------------------
+@include global-setup();
+
+body {
+	@include no-spacing();
+}
+
+// Container
+.container {
+	@include limit();
+	padding: 20px 20px;
+
+	@include respond-to(large) {
+		padding: 40px 20px;
+	}
+
+	// Confine
+	&.confine {
+		@include width(100%);
+
+		@include respond-to(40em) {
+			@include width(40em);
+		}
+	}
+
+	// Tabplate triggers
+	.tabplate-triggers {
+		@include row();
+
+		>li {
+			@include span(4);
+		}
+	}
+}
