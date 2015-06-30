@@ -24,12 +24,12 @@
 
 		<h3>Tabu Example</h3>
 
-		<ul class="tabplate-triggers">
+		<ul class="tabplate-example">
 			<li><a href="#">Create</a></li>
 			<li><a href="#">Images</a></li>
 			<li><a href="#">Order</a></li>
 		</ul>
-		<ul class="tabplate-content">
+		<ul class="tabplate-example-content">
 			<li class="something">
 				<p>1) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis mauris mi. Quisque sodales vel orci eu consequat. Morbi lacinia, ligula sit amet commodo interdum, ligula tortor rhoncus elit, quis pretium orci nunc nec nisi. Nunc ultrices dui et erat elementum, vel ultricies erat pellentesque. Sed pretium libero ullamcorper turpis malesuada pretium. Fusce vitae ultrices massa. Morbi mollis erat at urna imperdiet, sit amet malesuada lacus pulvinar. Quisque aliquam lacus velit.</p>
 				
@@ -48,7 +48,10 @@
 	</div>
 
 	<script>
-	new Tabplate('.tabplate-content', { triggers: '.tabplate-triggers', animate: true });
+	new tabplate('.tabplate-example', { 
+		animate: true,
+		content: '.tabplate-example-content' 
+	});
 	</script>
 
 </body>
