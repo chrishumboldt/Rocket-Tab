@@ -11,6 +11,6 @@
 // Generate CSS
 // ---------------------------------------------------------------------------------------
 @mixin tabplate-css() {
-	@include tabplate-content();
+	@include tabplate-tabs();
 	@include tabplate-trigger();
 }

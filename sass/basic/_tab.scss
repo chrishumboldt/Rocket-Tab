@@ -1,5 +1,5 @@
 /**
- * File: _content.scss
+ * File: _tab.scss
  * Type: SASS basic
  * Author: Chris Humboldt
  */
@@ -10,8 +10,8 @@
 
 // Content
 // ---------------------------------------------------------------------------------------
-@mixin tabplate-content() {
-	ul.tabplate-content {
+@mixin tabplate-tabs() {
+	ul.tabplate-tabs {
 		@include list-style(none);
 		@include spacing-no();
 		@include overflow(auto);

@@ -34,7 +34,7 @@ var tabplateComponent = function($this, $userOptions) {
 	$self.options = {
 		animate: $self.getAttribute('data-tabplate-animate') || $userOptions.animate || false,
 		theme: false,
-		content: $self.getAttribute('data-tabplate-content') || $userOptions.content || '.tabplate-content'
+		tabs: $self.getAttribute('data-tabplate-tabs') || $userOptions.tabs || '.tabplate-tabs'
 	};
 
 	// Tools
@@ -75,22 +75,22 @@ var tabplateComponent = function($this, $userOptions) {
 	}(document, $self.options);
 
 	// Calls
-	contentSetup();
+	tabSetup();
 	triggerSetup();
 
 	// Internal functions
-	function contentSetup() {
-		if ($self.options.content.charAt(0) === '#') {
-			$tabContent = document.getElementById($self.options.content.substring(1));
+	function tabSetup() {
+		if ($self.options.tabs.charAt(0) === '#') {
+			$tabs = document.getElementById($self.options.tabs.substring(1));
 		} else {
-			$tabContent = document.querySelector($self.options.content);
+			$tabs = document.querySelector($self.options.tabs);
 		}
 
-		tool.classAdd($tabContent, 'tabplate-content');
-		tool.classAdd($tabContent.querySelector('li:first-child'), 'active');
+		tool.classAdd($tabs, 'tabplate-tabs');
+		tool.classAdd($tabs.querySelector('li:first-child'), 'active');
 
 		if ($self.options.animate.toString() == 'true') {
-			$tabContent.style.height = $tabContent.querySelector('li.active').clientHeight + 'px';
+			$tabs.style.height = $tabs.querySelector('li.active').clientHeight + 'px';
 		}
 
 		// Animiate class
@@ -120,10 +120,10 @@ var tabplateComponent = function($this, $userOptions) {
 	$self.changeTab = function($index) {
 		tool.classRemove($self.querySelector('li.active'), 'active');
 		tool.classAdd($self.querySelector('li:nth-child(' + ($index + 1) + ')'), 'active');
-		tool.classRemove($tabContent.querySelector('li.active'), 'active');
-		tool.classAdd($tabContent.querySelector('li:nth-child(' + ($index + 1) + ')'), 'active');
+		tool.classRemove($tabs.querySelector('li.active'), 'active');
+		tool.classAdd($tabs.querySelector('li:nth-child(' + ($index + 1) + ')'), 'active');
 		if ($self.options.animate.toString() == 'true') {
-			$tabContent.style.height = $tabContent.querySelector('li.active').clientHeight + 'px';
+			$tabs.style.height = $tabs.querySelector('li.active').clientHeight + 'px';
 		}
 	};
 };
