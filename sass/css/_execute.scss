@@ -4,12 +4,7 @@
  * Author: Chris Humboldt
  */
 
-// Table of contents
-// ---------------------------------------------------------------------------------------
 // Generate CSS
-
-// Generate CSS
-// ---------------------------------------------------------------------------------------
 @mixin tabplate-css() {
 	@include tabplate-tabs();
 	@include tabplate-trigger();

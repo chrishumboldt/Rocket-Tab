@@ -4,12 +4,7 @@
  * Author: Chris Humboldt
  */
 
-// Table of contents
-// ---------------------------------------------------------------------------------------
 // Triggers
-
-// Triggers
-// ---------------------------------------------------------------------------------------
 @mixin tabplate-trigger() {
 	ul.tabplate-triggers {
 		@include list-style(none);
