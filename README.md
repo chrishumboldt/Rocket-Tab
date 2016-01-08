@@ -51,7 +51,6 @@ new tabplate({
 ```
 
 ## Javascript Options
-There are a few component options that you can set.
 
 | Name | Default | Options | Description |
 | ---- | ---- | ---- | ---- |
