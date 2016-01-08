@@ -1,4 +1,4 @@
-# Navplate
+# Tabplate
 A tabulation component.
 
 ## Getting Started
