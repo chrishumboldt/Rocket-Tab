@@ -1,6 +1,6 @@
 {
 	"name": "navplate",
-	"version": "1.1.0",
+	"version": "1.1.2",
 	"description": "A tabulation component.",
 	"main": ["js/min/tabplate.js", "css/tabplate.css"],
 	"repository": {
