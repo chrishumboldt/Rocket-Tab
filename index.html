@@ -25,11 +25,11 @@ bower install tabplate
 		<p>Start by including the necessary files.</p>
 <pre class="prettyprint linenums">
 &lt;head&gt;
-    &lt;link href=&quot;css/tabplate.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+    &lt;link href=&quot;css/tabplate.min.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
 &lt;/head&gt;
 &lt;body&gt;
     /* Your content goes here */
-    &lt;script src=&quot;js/min/tabplate.js&quot;>&lt;/script&gt;
+    &lt;script src=&quot;js/tabplate.min.js&quot;>&lt;/script&gt;
 &lt;/body&gt;
 </pre>
 		<br>
@@ -37,14 +37,14 @@ bower install tabplate
 		<p>The Tabplate component uses two unordered lists to change between what content is viewed. See a basic HTML example below.</p>
 <pre class="prettyprint linenums">
 &lt;ul id="tabplate-triggers"&gt;
-    &lt;li&gt;&lt;a&gt;Create&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a&gt;Images&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a&gt;Order&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#tab-create"&gt;Create&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#tab-images"&gt;Images&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#tab-order"&gt;Order&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ul id="tabplate-tabs"&gt;
-    &lt;li&gt;&lt;p&gt;Your content goes here.&lt;/p&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;p&gt;Your content goes here.&lt;/p&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;p&gt;Your content goes here.&lt;/p&gt;&lt;/li&gt;
+    &lt;li id="tab-create"&gt;&lt;p&gt;Your content goes here.&lt;/p&gt;&lt;/li&gt;
+    &lt;li id="tab-images"&gt;&lt;p&gt;Your content goes here.&lt;/p&gt;&lt;/li&gt;
+    &lt;li id="tab-order"&gt;&lt;p&gt;Your content goes here.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </pre>
 		<br>

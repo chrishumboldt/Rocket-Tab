@@ -12,11 +12,11 @@ Start by including the necessary files.
 
 ```
 <head>
-	<link href="css/tabplate.css" rel="stylesheet" type="text/css">
+	<link href="css/tabplate.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	/* Your content goes here */
-	<script src="js/min/tabplate.js"></script>
+	<script src="js/tabplate.min.js"></script>
 </body>
 ```
 
@@ -25,14 +25,14 @@ The Tabplate component uses two unordered lists to change between what content i
 
 ```
 <ul id="tabplate-triggers">
-	<li><a>Create</a></li>
-	<li><a>Images</a></li>
-	<li><a>Order</a></li>
+	<li><a href="#tab-create">Create</a></li>
+	<li><a href="#tab-images">Images</a></li>
+	<li><a href="#tab-order">Order</a></li>
 </ul>
 <ul id="tabplate-tabs">
-	<li><p>Your content goes here.</p></li>
-	<li><p>Your content goes here.</p></li>
-	<li><p>Your content goes here.</p></li>
+	<li id="tab-create"><p>Your content goes here.</p></li>
+	<li id="tab-images"><p>Your content goes here.</p></li>
+	<li id="tab-order"><p>Your content goes here.</p></li>
 </ul>
 
 ```
