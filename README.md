@@ -24,12 +24,12 @@ Start by including the necessary files.
 The Tabplate component uses two unordered lists to change between what content is viewed. See a basic HTML example below.
 
 ```
-<ul id="tabplate-triggers">
+<ul id="tab-triggers">
 	<li><a href="#tab-create">Create</a></li>
 	<li><a href="#tab-images">Images</a></li>
 	<li><a href="#tab-order">Order</a></li>
 </ul>
-<ul id="tabplate-tabs">
+<ul id="tab-content">
 	<li id="tab-create"><p>Your content goes here.</p></li>
 	<li id="tab-images"><p>Your content goes here.</p></li>
 	<li id="tab-order"><p>Your content goes here.</p></li>
@@ -43,8 +43,8 @@ Use the following example to trigger the Tabplate component.
 ```
 <script>
 new tabplate({
-	selector: '#tabplate-triggers',
-	tabs: '#tabplate-tabs',
+	selector: '#tab-triggers',
+	tabs: '#tab-content',
 	animate: true
 });
 </script>
@@ -54,9 +54,9 @@ new tabplate({
 
 | Name | Default | Options | Description |
 | ---- | ---- | ---- | ---- |
-| selector | #tabplate-triggers | | Set the HTML selector. |
+| selector | #tab-triggers | | Set the HTML selector. |
 | animate | false | true, false | Set the tabulation change to animate or not. |
-| tabs | #tabplate-tabs | | Set the tabulation content selector. |
+| tabs | #tab-content | | Set the tabulation content selector. |
 
 #### Defaults
 You can also set or overwrite the above options globally by altering the Tabplate defaults. To do so reference the **$tabplateDefault** object. For example:

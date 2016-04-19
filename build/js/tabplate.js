@@ -9,12 +9,23 @@
 // Tools
 
 var $tabplateDefault = {
-	selector: '#tabplate-triggers',
-	animate: false,
-	tabs: '#tabplate-tabs'
+	selector: '#tab-triggers',
+	tabs: '#tab-content',
+	animate: true
 }
 
 var tabplate = function($userOptions) {
+	// Setup
+	var $self = this;
+
+	// Options
+	$userOptions = $userOptions || false;
+	$self.options = {
+		selector: $userOptions.selector || $tabplateDefault.selector,
+		tabs: $userOptions.tabs || $tabplateDefault.tabs,
+		animate: (typeof $userOptions.animate != 'undefined') ? $userOptions.animate : $tabplateDefault.animate
+	}
+
 	// Web tools
 	var web = function(document) {
 		// Variables
@@ -105,66 +116,46 @@ var tabplate = function($userOptions) {
 		};
 	}(document);
 
-	var $selector = ($userOptions && $userOptions.selector) ? $userOptions.selector : $tabplateDefault.selector;
-	var $selectorType = $selector.charAt(0).toString();
-	if ($selectorType === '#' && !web.hasWhiteSpace($selector)) {
-		new tabplateComponent(document.getElementById($selector.substring(1)), $userOptions, web);
-	} else {
-		var $elements = document.querySelectorAll($selector);
-		for (var $i = $elements.length - 1; $i >= 0; $i--) {
-			new tabplateComponent($elements[$i], $userOptions, web);
-		};
-	}
-};
-
-var tabplateComponent = function($self, $userOptions, web) {
 	// Variables
-	var $tabs;
+	var $tabContainer = document.querySelector($self.options.tabs);
+	var $triggersContainer = document.querySelector($self.options.selector);
 
-	// Options
-	$userOptions = $userOptions || false;
-	$options = {
-		animate: (typeof $userOptions.animate !== 'undefined') ? $userOptions.animate : $tabplateDefault.animate,
-		tabs: $userOptions.tabs || $tabplateDefault.tabs,
-	};
-
-	// Internal functions
-	var tabChange = function($id) {
-		web.classRemove($tabs.querySelector('li.active'), 'active');
-		web.classAdd(document.getElementById($id.substring(1)), 'active');
-		if ($options.animate.toString() == 'true') {
-			$tabs.style.height = $tabs.querySelector('li.active').clientHeight + 'px';
-		}
-	};
-	function tabSetup() {
-		$tabs = document.querySelector($options.tabs);
-		if (web.exists($tabs)) {
-			web.classAdd($tabs, 'tabplate-tabs');
-			web.classAdd($tabs.querySelector('li:first-child'), 'active');
-			if ($options.animate.toString() == 'true') {
-				$tabs.style.height = $tabs.querySelector('li.active').clientHeight + 'px';
-				web.classAdd(web.element.html, 'tp-animate');
-			}
-		}
-	}
-
-	function triggerSetup() {
-		var $triggerLinks = $self.querySelectorAll('li a');
-		var $triggerLength = $triggerLinks.length;
-		web.classAdd($self, 'tabplate-triggers');
-		web.classAdd($self, 'tabplate-count-' + $triggerLength);
-		web.classAdd($self.querySelector('li:first-child'), 'active');
-		for (var $i = $triggerLength - 1; $i >= 0; $i--) {
-			$triggerLinks[$i].onclick = function(event) {
+	// Functions
+	var tabTriggers = function() {
+		var $triggers = $triggersContainer.querySelectorAll('a');
+		for (var $i = 0, $len = $triggers.length; $i < $len; $i++) {
+		   $triggers[$i].onclick = function(event) {
 				event.preventDefault();
-				web.classRemove($self.querySelector('li.active'), 'active');
-				web.classAdd(this.parentNode, 'active');
-				tabChange(this.getAttribute('href'));
+				if (this.getAttribute('href') !== null) {
+					web.classRemove($triggersContainer.querySelector('._active'), '_active');
+					web.classAdd(this.parentNode, '_active');
+					tabShow(this.getAttribute('href').substring(1));
+				}
 			};
 		}
-	}
+	};
+	var tabsSetup = function() {
+		// Triggers
+		if (web.exists($triggersContainer)) {
+			web.classAdd($triggersContainer, 'tp-triggers');
+			web.classAdd($triggersContainer.querySelector('li:first-child'), '_active');
+			tabTriggers();
+		}
+		// Tabs
+		if (web.exists($tabContainer)) {
+			web.classAdd($tabContainer, 'tp-tabs');
+			web.classAdd($tabContainer.querySelector('li:first-child'), '_active');
+		}
+		// Animate
+		if ($self.options.animate === true) {
+			web.classAdd(web.element.html, 'tp-animate');
+		}
+	};
+	var tabShow = function($id) {
+		web.classRemove($tabContainer.querySelector('._active'), '_active');
+		web.classAdd(document.getElementById($id), '_active');
+	};
 
-	// Calls
-	tabSetup();
-	triggerSetup();
+	// Execute
+	tabsSetup();
 };

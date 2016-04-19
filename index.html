@@ -41,7 +41,7 @@ bower install tabplate
     &lt;li&gt;&lt;a href="#tab-images"&gt;Images&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="#tab-order"&gt;Order&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;ul id="tabplate-tabs"&gt;
+&lt;ul id="tabplate-content"&gt;
     &lt;li id="tab-create"&gt;&lt;p&gt;Your content goes here.&lt;/p&gt;&lt;/li&gt;
     &lt;li id="tab-images"&gt;&lt;p&gt;Your content goes here.&lt;/p&gt;&lt;/li&gt;
     &lt;li id="tab-order"&gt;&lt;p&gt;Your content goes here.&lt;/p&gt;&lt;/li&gt;
@@ -53,27 +53,27 @@ bower install tabplate
 <pre class="prettyprint linenums">
 &lt;script&gt;
 new tabplate({
-    selector: '#tabplate-triggers',
-    tabs: '#tabplate-tabs',
+    selector: '#tab-triggers',
+    tabs: '#tab-content',
     animate: true
 });
 &lt;/script&gt;
 </pre>
       <br>
       <h4>Working Example</h4>
-		<ul id="tabplate-triggers">
-			<li><a href="#create">Create</a></li>
-			<li><a href="#images">Images</a></li>
-			<li><a href="#order">Order</a></li>
+		<ul id="tab-triggers">
+			<li><a href="#tab-create">Create</a></li>
+			<li><a href="#tab-images">Images</a></li>
+			<li><a href="#tab-order">Order</a></li>
 		</ul>
-		<ul id="tabplate-tabs">
-			<li id="create">
+		<ul id="tab-content">
+			<li id="tab-create">
 				<p>CREATE CONTENT: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</li>
-			<li id="images">
+			<li id="tab-images">
 				<p>IMAGES CONTENT: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</li>
-			<li id="order">
+			<li id="tab-order">
 				<p>ORDER CONTENT: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</li>
 		</ul>
@@ -96,11 +96,7 @@ new tabplate({
 	<script src="js/tabplate.min.js"></script>
 	<script src="js/demo.min.js"></script>
 	<script>
-	new tabplate({
-	    selector: '#tabplate-triggers',
-	    tabs: '#tabplate-tabs',
-		 animate: true
-	});
+	new tabplate();
 	</script>
 
 </body>
