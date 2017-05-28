@@ -1,23 +1,31 @@
 {
-	"name": "navplate",
-	"version": "1.2.0",
-	"description": "A tabulation component.",
-	"main": ["js/tabplate.min.js", "css/tabplate.min.css"],
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/chrishumboldt/Tabplate.git"
-	},
-	"keywords": [
-		"Tabulation",
-		"Webplate",
-		"Javascript",
-		"CSS",
-		"Component"
-   ],
-	"author": "Chris Humboldt",
-	"license": "Apache-2.0",
-	"bugs": {
-		"url": "https://github.com/chrishumboldt/Tabplate/issues"
-	},
-	"homepage": "https://github.com/chrishumboldt/Tabplate#readme"
+  "name": "rocket-tab",
+  "version": "2.0.0",
+  "description": "A tabulation component.",
+  "main": "js/tab.min.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrishumboldt/Tabplate.git"
+  },
+  "keywords": [
+    "Rocket",
+    "Part",
+    "Module",
+    "Tabulation",
+    "Javascript",
+    "CSS"
+  ],
+  "author": "Chris Humboldt",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/chrishumboldt/Tabplate/issues"
+  },
+  "homepage": "https://github.com/chrishumboldt/Tabplate#readme",
+  "dependencies": {
+    "rocket-tools": "^1.14.3"
+  },
+  "devDependencies": {
+    "rocket-demo": "^2.0.1",
+    "rocket-propel": "^3.0.3"
+  }
 }

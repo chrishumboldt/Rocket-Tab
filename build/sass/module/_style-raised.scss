@@ -1,0 +1,35 @@
+/**
+@author Chris Humboldt
+**/
+
+@mixin rocket-tab-style-raised {
+   ul.rt-triggers._s-raised {
+      li {
+         a {
+            @include border-left(transparent, 0px);
+            @include border-right(transparent, 0px);
+            @include background-colour($grey-blue-x-light);
+
+            &._state-active,
+            .rocket-no-touch &:hover {
+               @include border-left(transparent, 0px);
+               @include border-right(transparent, 0px);
+            }
+            &._state-active {
+               @include background-colour($white);
+               @include drop-shadow(fade-out($black, 0.88), 8px, -4px);
+            }
+         }
+      }
+
+      &._vertical {
+         li {
+            a {
+               &._state-active,
+               .rocket-no-touch &:hover {
+               }
+            }
+         }
+      }
+   }
+}

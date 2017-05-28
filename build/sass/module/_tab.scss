@@ -1,0 +1,38 @@
+/**
+@author Chris Humboldt
+**/
+
+@mixin rocket-tab-tabs {
+   .rt-tab {
+      @include row;
+      @include hide;
+      @include padding-horizontal($space-small);
+      @include padding-vertical($space-minor);
+
+      @include breakpoint($bp-medium) {
+         @include padding-horizontal($space-base);
+         @include padding-vertical($space-base + 6px);
+      }
+
+		&._state-active {
+			@include show;
+		}
+
+		&._animate {
+			@include animate(all);
+
+			&._state-active {
+				@include animation(rockettabfadein, 0.5s);
+			}
+		}
+   }
+
+   @include keyframes(rockettabfadein) {
+      0% {
+			@include opacity(0);
+		}
+		100% {
+			@include opacity(1);
+		}
+   }
+}

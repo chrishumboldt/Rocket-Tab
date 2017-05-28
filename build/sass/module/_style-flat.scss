@@ -1,0 +1,50 @@
+/**
+@author Chris Humboldt
+**/
+
+@mixin rocket-tab-style-flat {
+   ul.rt-triggers._s-flat,
+   ul.rt-triggers._s-raised {
+      li {
+         @include margin-right($space-x-small);
+
+         a {
+            @include background-colour($white);
+            @include border-top(transparent, 2px);
+            @include border-left(transparent, 1px);
+            @include border-right(transparent, 1px);
+            @include border-bottom($grey-blue-light, 1px);
+
+            &._state-active,
+            .rocket-no-touch &:hover {
+               @include text-colour($blue);
+            }
+            &._state-active {
+               @include border-top($blue, 2px);
+               @include border-left($grey-blue-light, 1px);
+               @include border-right($grey-blue-light, 1px);
+               @include border-bottom($white, 1px);
+            }
+         }
+      }
+
+      &._vertical {
+         li {
+            a {
+               @include border-top(transparent, 0px);
+               @include border-left(transparent, 0px);
+               @include border-bottom(transparent, 0px);
+               @include border-right($white, 2px);
+
+               &._state-active,
+               .rocket-no-touch &:hover {
+                  @include border-top(transparent, 0px);
+                  @include border-left(transparent, 0px);
+                  @include border-bottom(transparent, 0px);
+                  @include border-right($blue, 2px);
+               }
+            }
+         }
+      }
+   }
+}
