@@ -1,76 +1,78 @@
-# Tabplate
-A tabulation component.
+# Rocket Tab
+A Javascript tabulation module.
+
+* [Getting Started](#getting-started)
+* [Basic Example](#basic-example)
+* [Initialization](#initialization)
+	* [Options](#options)
+	* [Defaults](#defaults)
 
 ## Getting Started
-You can either download a copy of the source files or install Tabplate via Bower.
+Install via NPM.
 
 ```
-bower install tabplate
+npm install rocket-tab
 ```
+
+**NOTE** that this module has a dependency [Rocket Tools (21kb)](https://github.com/chrishumboldt/Rocket-Tools) which will automatically be installed as well.
 
 Start by including the necessary files.
 
-```
+```html
 <head>
-	<link href="css/tabplate.min.css" rel="stylesheet" type="text/css">
+   <link href="node_modules/rocket-tab/css/tab.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	/* Your content goes here */
-	<script src="js/tabplate.min.js"></script>
+   /* Your content goes here */
+   <script src="node_modules/rocket-tools/js/tools.min.js"></script>
+   <script src="node_modules/rocket-tab/js/tab.min.js"></script>
 </body>
 ```
 
 ## HTML Example
-The Tabplate component uses two unordered lists to change between what content is viewed. See a basic HTML example below.
+The tab module uses a basic HTML structure to achieve the desired effect. See an example below.
 
-```
-<ul id="tab-triggers">
-	<li><a href="#tab-create">Create</a></li>
-	<li><a href="#tab-images">Images</a></li>
-	<li><a href="#tab-order">Order</a></li>
-</ul>
-<ul id="tab-content">
-	<li id="tab-create"><p>Your content goes here.</p></li>
-	<li id="tab-images"><p>Your content goes here.</p></li>
-	<li id="tab-order"><p>Your content goes here.</p></li>
+```html
+<ul class="rt-triggers">
+   <li><a href="#tab-info">Info</a></li>
+   <li><a href="#tab-comments">Comments</a></li>
+   <li><a href="#tab-security">Security</a></li>
 </ul>
 
+<div id="tab-info">Info Tab</div>
+<div id="tab-comments">Comments Tab</div>
+<div id="tab-security">Security Tab</div>
 ```
 
-## Execute Via Javascript
-Use the following example to trigger the Tabplate component.
+## Initialization
+Use the following example to trigger the tab module.
 
+```js
+Rocket.tab();
 ```
-<script>
-new tabplate({
-	selector: '#tab-triggers',
-	tabs: '#tab-content',
-	animate: true
+
+#### Options
+Name | Default | Options | Description
+---- | ---- | ---- | ----
+`target` | `.rt-triggers a` | | Set the target triggers elements.
+`animate` | `false` | `false` `true` | Animate the transition from one tab content to the next.
+`style` | `line` | `flat` `line`, `raised` | Set some basic styling.
+`vertical` | `false` | `false` `true` | Set a vertical class with some basic styling.
+
+```js
+Rocket.tab({
+   target: '.new-trigger-class',
+   animate: true,
+   style: 'flat',
+   vertical: true
 });
-</script>
 ```
-
-## Javascript Options
-
-| Name | Default | Options | Description |
-| ---- | ---- | ---- | ---- |
-| selector | #tab-triggers | | Set the HTML selector. |
-| animate | false | true, false | Set the tabulation change to animate or not. |
-| tabs | #tab-content | | Set the tabulation content selector. |
 
 #### Defaults
-You can also set or overwrite the above options globally by altering the Tabplate defaults. To do so reference the **$tabplateDefault** object. For example:
+You can also overwrite the module options globally by altering the defaults. To do so reference the defaults object property. For example:
 
-```
-<script>
-// Default change
-$tabplateDefault.selector = '.tab-links';
-$tabplateDefault.tabs = '#tab-content';
-$tabplateDefault.animate = true;
-
-// Execute
-new tabplate();
-</script>
+```js
+Rocket.defaults.tab.style = 'raised';
 ```
 
 ## Author
@@ -80,7 +82,7 @@ Twitter: <a href="https://twitter.com/chrishumboldt">twitter.com/chrishumboldt</
 GitHub <a href="https://github.com/chrishumboldt">github.com/chrishumboldt</a><br>
 
 ## Copyright and License
-Copyright 2016 Webplate Project
+Copyright 2017 Rocket Project
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
