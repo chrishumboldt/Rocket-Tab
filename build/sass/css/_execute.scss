@@ -1,11 +1,11 @@
 /**
- * File: _execute.scss
- * Type: SASS CSS
- * Author: Chris Humboldt
- */
+@author Chris Humboldt
+**/
 
-// Generate CSS
-@mixin tabplate-css() {
-	@include tabplate-tabs();
-	@include tabplate-trigger();
+@mixin rocket-tab-css {
+   @include rocket-tab-tabs;
+   @include rocket-tab-triggers;
+   @include rocket-tab-style-flat;
+   @include rocket-tab-style-line;
+   @include rocket-tab-style-raised;
 }

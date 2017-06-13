@@ -1,0 +1,40 @@
+/**
+@author Chris Humboldt
+**/
+
+@mixin rocket-tab-triggers {
+   ul.rt-triggers {
+      @include row;
+      @include spacing-no;
+      @include width(100%);
+      @include list-style(none);
+      @include border-bottom($grey-blue-light);
+
+      li {
+         @include float(left);
+         @include margin-bottom(-1px);
+
+         a {
+            @include show;
+            @include padding-horizontal($space-small);
+            @include padding-vertical($space-small - 4px);
+            @include text-colour($grey-blue);
+            @include text-decoration(none);
+            @include animate(all);
+
+            @include breakpoint($bp-medium) {
+               @include padding-horizontal($space-base);
+               @include padding-vertical($space-small - 2px);
+            }
+         }
+      }
+
+      &._vertical {
+         @include border-no;
+
+         li {
+            @include float-no;
+         }
+      }
+   }
+}

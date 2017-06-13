@@ -1,0 +1,11 @@
+{
+   "build": [{
+      "name": "tab",
+      "css": [
+         "build/sass/tab.scss"
+      ],
+      "js": [
+         "build/js/tab.js"
+      ]
+   }]
+}
