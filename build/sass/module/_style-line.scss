@@ -3,7 +3,7 @@
 **/
 
 @mixin rocket-tab-style-line {
-   ul.rocket-tab-triggers._s-line {
+   ul.rocket-tab._s-line {
       li {
          a {
             @include border-bottom(transparent, 2px);

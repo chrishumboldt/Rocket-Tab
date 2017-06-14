@@ -33,7 +33,7 @@ Start by including the necessary files.
 The tab module uses a basic HTML structure to achieve the desired effect. See an example below.
 
 ```html
-<ul class="rocket-tab-triggers">
+<ul class="rocket-tab">
    <li><a href="#tab-info">Info</a></li>
    <li><a href="#tab-comments">Comments</a></li>
    <li><a href="#tab-security">Security</a></li>
@@ -54,7 +54,7 @@ Rocket.tab();
 #### Options
 Name | Default | Options | Description
 ---- | ---- | ---- | ----
-`target` | `.rocket-tab-triggers a` | | Set the target triggers elements.
+`target` | `.rocket-tab a` | | Set the target triggers elements.
 `animate` | `false` | `false` `true` | Animate the transition from one tab content to the next.
 `style` | `line` | `flat` `line`, `raised` | Set some basic styling.
 `vertical` | `false` | `false` `true` | Set a vertical class with some basic styling.
