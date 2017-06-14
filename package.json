@@ -1,7 +1,7 @@
 {
   "name": "rocket-tab",
   "version": "2.0.0",
-  "description": "A tabulation component.",
+  "description": "A Javascript tabulation module.",
   "main": "js/tab.min.js",
   "repository": {
     "type": "git",
