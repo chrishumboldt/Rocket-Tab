@@ -3,7 +3,7 @@
 **/
 
 @mixin rocket-tab-triggers {
-   ul.rocket-tab-triggers {
+   ul.rocket-tab {
       @include row;
       @include spacing-no;
       @include width(100%);

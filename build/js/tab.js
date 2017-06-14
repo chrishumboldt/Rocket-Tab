@@ -3,7 +3,7 @@
 **/
 // Extend Rocket
 Rocket.defaults.tab = {
-    target: '.rocket-tab-triggers a',
+    target: '.rocket-tab a',
     animate: false,
     style: 'line',
     vertical: false
@@ -16,7 +16,7 @@ var RockMod_Tab;
     var tabs = {
         execute: function (triggers, opt) {
             var tabs = [];
-            var tabParentClasses = ['rocket-tab-triggers'];
+            var tabParentClasses = ['rocket-tab'];
             // Functions
             function showTab(trigger, tab) {
                 var thisTab = (Rocket.is.string(tab)) ? Rocket.dom.element(tab) : tab;
