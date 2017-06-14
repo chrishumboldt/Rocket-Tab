@@ -3,7 +3,7 @@
 **/
 
 @mixin rocket-tab-style-raised {
-   ul.rt-triggers._s-raised {
+   ul.rocket-tab-triggers._s-raised {
       li {
          a {
             @include border-left(transparent, 0px);

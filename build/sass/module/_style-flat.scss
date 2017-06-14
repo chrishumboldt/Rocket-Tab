@@ -3,8 +3,8 @@
 **/
 
 @mixin rocket-tab-style-flat {
-   ul.rt-triggers._s-flat,
-   ul.rt-triggers._s-raised {
+   ul.rocket-tab-triggers._s-flat,
+   ul.rocket-tab-triggers._s-raised {
       li {
          @include margin-right($space-x-small);
 

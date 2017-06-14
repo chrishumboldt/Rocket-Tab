@@ -1,11 +1,11 @@
 {
   "name": "rocket-tab",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A Javascript tabulation module.",
   "main": "js/tab.min.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chrishumboldt/Tabplate.git"
+    "url": "git+https://github.com/chrishumboldt/Rocket-Tab.git"
   },
   "keywords": [
     "Rocket",
@@ -18,9 +18,9 @@
   "author": "Chris Humboldt",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/chrishumboldt/Tabplate/issues"
+    "url": "https://github.com/chrishumboldt/Rocket-Tab/issues"
   },
-  "homepage": "https://github.com/chrishumboldt/Tabplate#readme",
+  "homepage": "https://github.com/chrishumboldt/Rocket-Tab#readme",
   "dependencies": {
     "rocket-tools": "^1.14.3"
   },
