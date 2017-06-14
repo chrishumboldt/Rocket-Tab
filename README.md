@@ -56,7 +56,7 @@ Name | Default | Options | Description
 ---- | ---- | ---- | ----
 `target` | `.rocket-tab a` | | Set the target triggers elements.
 `animate` | `false` | `false` `true` | Animate the transition from one tab content to the next.
-`style` | `line` | `flat` `line`, `raised` | Set some basic styling.
+`style` | `line` | `flat` `line` `raised` | Set some basic styling.
 `vertical` | `false` | `false` `true` | Set a vertical class with some basic styling.
 
 ```js
