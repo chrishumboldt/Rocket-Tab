@@ -3,10 +3,9 @@
 **/
 
 @mixin rocket-tab-triggers {
-   ul.rocket-tab {
+   ul.rocket-tab:not(._s-none) {   
       @include row;
       @include spacing-no;
-      @include width(100%);
       @include list-style(none);
       @include border-bottom($grey-blue-light);
 

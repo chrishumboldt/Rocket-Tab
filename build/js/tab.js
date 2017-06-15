@@ -11,7 +11,7 @@ Rocket.defaults.tab = {
 // Module
 var RockMod_Tab;
 (function (RockMod_Tab) {
-    var styles = ['line', 'flat', 'raised'];
+    var styles = ['line', 'flat', 'none', 'raised'];
     // Functions
     var tabs = {
         execute: function (triggers, opt) {
